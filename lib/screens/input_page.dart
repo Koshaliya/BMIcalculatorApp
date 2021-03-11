@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'GenderCard.dart';
-import 'ReusableCard.dart';
-import 'constant.dart';
-import 'roundButton.dart';
-//import 'package:bmi_calculator/screens/results_page.dart';
-//import 'package:bmi_calculator/components/bottom_button.dart';
-//import 'package:bmi_calculator/components/round_icon_button.dart';
-//import 'package:bmi_calculator/calculator_brain.dart';
+import '../components/GenderCard.dart';
+import '../components/ReusableCard.dart';
+import '../components/constant.dart';
+import '../components/roundButton.dart';
+import 'results_page.dart';
+import '../components/bottomButton.dart';
+import '../calculaotor_brain.dart';
+
 
 enum Gender {
   male,
@@ -178,7 +178,7 @@ class _InputPageState extends State<InputPage> {
                         ),
                         Text(
                           age.toString(),
-                          style: kTextLabel,
+                          style: kNumberStyle,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -212,7 +212,7 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          /*BottomButton(
+          BottomButton(
             buttonTitle: 'CALCULATE',
             onTap: () {
               CalculatorBrain calc =
@@ -229,7 +229,7 @@ class _InputPageState extends State<InputPage> {
                 ),
               );
             },
-          ),*/
+          ),
         ],
       ),
     );
